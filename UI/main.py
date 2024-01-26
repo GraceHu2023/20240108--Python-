@@ -4,9 +4,10 @@ import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 
 url = 'https://open-api-q2kw.onrender.com/pico_w/?count=10'
+#要用自己新加坡的網址
 #自動reload頁面每10秒
-st_autorefresh(interval=10000, limit=100, key="fizzbuzzcounter")
-
+st_autorefresh(interval=10000, limit=10000, key="fizzbuzzcounter")
+#limit 可以不設
 r = requests.get(url=url)
 
 if r.status_code == 200:
